@@ -1,10 +1,13 @@
 #!/bin/sh
 
+rm -rf maven
+
 get_artifact() {
-	mvn dependency:get "-Dartifact=$1" "-DrepoUrl=https://20kdc:$GITHUB_TOKEN@maven.pkg.github.com/t20kdc/datum" -s $GITHUB_WORKSPACE/settings.xml
+	sed "s/PACKAGE_GROUP_HERE/$1/g" < pom-template.xml | sed "s/PACKAGE_ID_HERE/$2/g" | sed "s/PACKAGE_VERSION_HERE/$3/g" | sed "s/PACKAGE_READ_TOKEN/$PACKAGE_READ_TOKEN/g" > pom.xml
+	mvn install
 }
 
-get_artifact "t20kdc.datum:datum:0.7-SNAPSHOT"
+get_artifact "t20kdc.datum" "datum" "0.7-SNAPSHOT"
 
 mkdir -p maven
 cp -r ~/.m2/repository/t20kdc ./maven/

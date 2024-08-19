@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>t20kdc.era3</groupId>
+	<artifactId>era3-github-workaround-plumbing</artifactId>
+	<version>0.666-SNAPSHOT</version>
+
+	<dependencies>
+		<dependency>
+			<groupId>PACKAGE_GROUP_HERE</groupId>
+			<artifactId>PACKAGE_ID_HERE</artifactId>
+			<version>PACKAGE_VERSION_HERE</version>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>datum</id>
+			<name>Datum GitHub Actions</name>
+			<url>https://20kdc:PACKAGE_READ_TOKEN@maven.pkg.github.com/20kdc/datum</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+</project>
+
