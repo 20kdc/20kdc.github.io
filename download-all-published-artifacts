@@ -1,7 +1,7 @@
 #!/bin/sh
 
 get_artifact() {
-	mvn dependency:get "-Dartifact=$1" -DrepoUrl=https://maven.pkg.github.com/t20kdc/datum -s $GITHUB_WORKSPACE/settings.xml
+	mvn dependency:get "-Dartifact=$1" "-DrepoUrl=https://20kdc:$GITHUB_TOKEN@maven.pkg.github.com/t20kdc/datum" -s $GITHUB_WORKSPACE/settings.xml
 }
 
 get_artifact "t20kdc.datum:datum:0.7-SNAPSHOT"

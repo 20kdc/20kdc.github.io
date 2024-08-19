@@ -1,0 +1,3 @@
+#!/bin/sh
+markdown < README.md > index.html
+./download-all-published-artifacts
