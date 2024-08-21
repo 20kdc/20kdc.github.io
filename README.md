@@ -16,3 +16,10 @@ These restrictions appear to have been built from the perspective of preventing 
 ## Reason B
 
 GitHub Packages requires you login with a token to download packages. This is unacceptable for developer onboarding, so I used Pages instead.
+
+This is done via CI, so you can verify where the packages are coming from yourself! See `build` and `download-all-published-artifacts`.
+
+Current packages hosted:
+
+* `t20kdc.era3:era3-github-workaround-plumbing`: This is a dummy package generated to make this whole thing work.
+* `t20kdc.datum:datum`: See <https://github.com/20kdc/datum>.
