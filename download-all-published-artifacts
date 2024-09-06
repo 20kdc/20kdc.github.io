@@ -8,6 +8,7 @@ get_artifact() {
 }
 
 get_artifact "t20kdc.datum" "datum" "0.7-SNAPSHOT"
+get_artifact "t20kdc.datum" "datum" "1.0"
 
 mkdir -p maven
 cp -r ~/.m2/repository/t20kdc ./maven/
